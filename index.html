@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VAADAGAI VANDI – Bike Rentals in Tamil Nadu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">VADAGAI VANDI</div>
+      <button class="bookbtn" id="openCart" aria-label="Open bookings">
+        My bookings<span id="count">0</span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <h1>Rent a bike.<br />Ride the Ghat roads.</h1>
+      <p>
+        Royal Enfield to electric scooters. Pick your dates, pick your ride, go.
+      </p>
+
+      <div class="search">
+        <label
+          >City
+          <select id="city">
+            <option>Chennai</option>
+            <option>Madurai</option>
+            <option>Coimbatore</option>
+            <option>Trichy</option>
+            <option>Ooty</option>
+          </select>
+        </label>
+        <label>Pickup date<input type="date" id="pickup" /></label>
+        <label>Return date<input type="date" id="ret" /></label>
+        <div class="days" id="daysBox">1 day</div>
+      </div>
+      <p class="err" id="dateErr"></p>
+    </section>
+
+    <div class="tools">
+      <div id="chips" style="display: contents"></div>
+      <select id="sort" aria-label="Sort bikes">
+        <option value="">Sort: Featured</option>
+        <option value="lo">Price: Low to High</option>
+        <option value="hi">Price: High to Low</option>
+      </select>
+    </div>
+
+    <main class="grid" id="grid"></main>
+    <footer>© 2026 Vadagai Vandi · Bike rentals in Tamilnadu</footer>
+
+    <div class="shade" id="shade"></div>
+    <aside class="drawer" id="drawer" aria-label="My bookings">
+      <div class="dh">
+        <h2>My bookings</h2>
+        <button class="x" id="closeCart" aria-label="Close">×</button>
+      </div>
+      <div class="items" id="items"></div>
+      <div class="df">
+        <div class="coupon">
+          <input id="coupon" placeholder="Coupon code" />
+          <button id="applyCoupon">Apply</button>
+        </div>
+        <p class="err" id="couponMsg"></p>
+        <div class="line"><span>Subtotal</span><span id="sub">₹0</span></div>
+        <div class="line" id="discRow" hidden>
+          <span>Discount (10%)</span><span id="disc">₹0</span>
+        </div>
+        <div class="line tot"><span>Total</span><span id="total">₹0</span></div>
+        <button class="cta" id="checkout">Confirm booking</button>
+      </div>
+    </aside>
+
+    <div class="modal" id="modal"><div class="box" id="box"></div></div>
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
